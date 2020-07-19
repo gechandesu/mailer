@@ -1,0 +1,46 @@
+This is an example of message template.<br>
+<br>
+Edit this file or add you own templates.
+
+<p>mailer is a simple utility for sending mail through a local mail server.</p>
+
+<p>It has a console interface and is designed to send email notifications.
+It's suggested that the utility will be used in conjunction with other scripts on the server.</p>
+
+<pre><code>
+Optional arguments:
+  -h, --help            show this help message and exit
+  -f MAIL_FROM, --mail-from MAIL_FROM
+                        mail sender
+  -t MAIL_TO, --mail-to MAIL_TO
+                        mail recipient
+  -s SUBJECT, --subject SUBJECT
+                        mail subject
+  -m MESSAGE, --message MESSAGE
+                        message text
+  -q, --quiet           quiet (no output)
+  -v, --version         print version and exit
+</code></pre>
+
+<p>mailer supports message templates.</p>
+
+<p>just pass it the <code>-m'&lt;template file&gt;'</code> and it will find the template in the config folder.
+If the template does not exist, then the text that you specified in quotes for the <code>-m</code> argument will be sent.</p>
+
+<p>You can change the folder for storing templates in <code>config/config.py</code>.
+This file also contains other default values:</p>
+
+<pre><code>
+TEMPLATES_PATH = "config/"
+HEADERS = "headers.template"
+MAIL_FROM = "notify@example.com"
+MAIL_TO = "root@example.org"
+SUBJECT = "Mail from mailer.py\n\n"
+TEMPLATE = "default.message"
+</code></pre>
+
+<p>These values are used when no arguments are specified for the mailer.</p>
+
+<p><code>config/</code> folder also contains message headers in <code>headers.template</code> file.</p>
+
+<center>Source code is available on <a href="https://github.com/gechandesu/mailer">GitHub</a>.</center>
