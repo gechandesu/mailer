@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import argparse
 import smtplib
 import sys
@@ -46,9 +48,9 @@ def get_message_body():
 #    return "some output"
 
 def get_message():
-    return get_message_headers()+"\nSubject: "+args().subject+"\n"+get_message_body()
+    return get_message_headers()+"Subject: "+args().subject+"\n"+get_message_body()
 
-def send_mail(mailfrom, mailto, message):
+def send_mail(mail_from, mail_to, message):
     smtp_obj = smtplib.SMTP('localhost')
     smtp_obj.starttls()
     smtp_obj.sendmail(mail_from, mail_to, message)
