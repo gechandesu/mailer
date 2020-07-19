@@ -11,7 +11,7 @@ from config import Config
 
 def create_parser():
     parser = argparse.ArgumentParser(
-        prog = 'mailer v.0.1',
+        prog = "mailer "+Config.VERSION,
         description = """It is a simple utility for sending mail through a local mail server.
                          You need to provide message template or message text for send mail.""",
         epilog = """More info: https://github.com/gechandesu/mailer
@@ -41,11 +41,6 @@ def get_message_body():
             return message_template.read()
     except IOError:
         return args().message
-
-#def get_output(args):
-#    if args().quiet:
-#        pass
-#    return "some output"
 
 def get_message():
     return get_message_headers()+"Subject: "+args().subject+"\n"+get_message_body()

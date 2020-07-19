@@ -26,7 +26,7 @@ Optional arguments:
 
 <p>mailer supports message templates.</p>
 
-<p>just pass it the <code>-m'&lt;template file&gt;'</code> and it will find the template in the config folder.
+<p>just pass it the <code>-m'&lt;template file&gt;'</code> and it will find the template in the <code>config/</code> folder.
 If the template does not exist, then the text that you specified in quotes for the <code>-m</code> argument will be sent.</p>
 
 <p>You can change the folder for storing templates in <code>config/config.py</code>.
@@ -45,6 +45,6 @@ TEMPLATE = "default.message"
 
 <p><code>config/</code> folder also contains message headers in <code>headers.template</code> file.</p>
 
-<center>Source code is available on <a href="https://github.com/gechandesu/mailer">GitHub</a>.</center>
+<center>Source code is available on <a href="https://github.com/gechandesu/mailer">GitHub.</a></center>
 </body>
 </html>

@@ -20,7 +20,7 @@ Optional arguments:
 
 mailer supports message templates.
 
-just pass it the `-m'<template file>'` and it will find the template in the config folder.
+Just pass it the `-m'<template file>'` and it will find the template in the `config/` folder.
 If the template does not exist, then the text that you specified in quotes for the `-m` argument will be sent.
 
 You can change the folder for storing templates in `config/config.py`.

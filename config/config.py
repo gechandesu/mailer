@@ -1,5 +1,5 @@
 class Config(object):
-    VERSION = "0.1"
+    VERSION = "0.1.1"
     TEMPLATES_PATH = "config/"
     HEADERS = "headers.template"
     MAIL_FROM = "notify@example.com"
